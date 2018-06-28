@@ -198,7 +198,10 @@ section {
 @media screen and (min-width: 800px) {
     section {
         width: 70%;
-        max-width: 880px;
+    }
+
+    section, footer > p {
+        max-width: 880px
     }
 
     #nav-bar {
