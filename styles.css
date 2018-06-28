@@ -9,6 +9,45 @@ body {
     color: wheat;
 }
 
+h1, h2, h3, p {
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+}
+
+a, button {
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+h2 {
+    padding: 1em 0 1.6em 0;
+    font-size: 1.4em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    margin: 2em 0;
+    display: block;
+}
+
+footer {
+    background-color: aliceblue;
+    padding: 2em 0.8em;
+    margin-top: 5em;
+}
+
+footer p {
+    font-size: .8em;
+    text-align: right;
+    color: dimgrey;    
+}
+
 #header {
     background-image: url('laptop.jpg');
     background-position: center center;
@@ -17,10 +56,7 @@ body {
     background-color: black;
     height: 100vh;
     width: 100%;
-}
-
-.left {
-    justify-content: flex-start;
+    margin-bottom: 1.6em;
 }
 
 #header-img {
@@ -44,7 +80,7 @@ body {
 #nav-bar {
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(90deg, rgba(109, 36, 91, .25) 0%, rgba(1, 92, 50, .32) 100%);
+    background-image: linear-gradient(90deg, rgba(109, 36, 91, .65) 0%, rgba(1, 92, 50, .72) 100%);
 }
 
 .nav-link, #header-img {
@@ -65,59 +101,91 @@ body {
     color: rgba(255, 255, 255, 1);
   }
 
+section {
+    width: 80%;
+    margin: 2em auto;
+}
+
+
+#prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+ }
+ 
+.card {
+    background: #f5e06b;
+    border-radius: 0px;
+    margin: .5em 0;
+    flex: 0 1 24%;
+}
+
+.card-content {
+	padding: 1.2em;
+}
+
+.card-content h3 {
+    text-transform: capitalize;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.card-content p {
+    font-size: .9em;
+	color: rgba(12, 12, 12, .8);
+}
+
+.price {
+    font-size: .9em;
+    font-weight: bold;
+    margin-bottom: .6em;
+}
+
 #form {
-    width: 60%;
+    font-size: .9em;
+    width: 100%;
     min-height: 50px;
-    height: auto;
-    border-radius: 5px;
-    margin: 2% auto;
-    padding: 2%;
+    border-radius: 0;
+    margin: 3em 0;
+    padding: 1em .2em;
     background-image: linear-gradient(-225deg, rgba(255, 64, 208, .7) 50%, rgba(8, 251, 139, .7) 50%);
 }
 
   .input-add-on {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
-    width: 3em;
   }
   
   .input-add-on_field {
     flex: 1;
-    /* field styles */
-    width: 240px;
-    height: 50px;
-  
-    padding: .3em .7em;
-    
+    width: 60%;  
     color: #5E6472;
-  
     outline: none;
     border: none;
-  
-    border-radius: 5px 0px 0px 5px;
   }
   
   .input-add-on_item {
-    /* item styles */
     display: inline-block;
     color: wheat;
-
-    width: 280px;
-    height: 50px;
-  
+    width: 60%;
     padding: 0 20px;
     background-color: #733065;
-    border-radius: 0px 5px 5px 0px;
-    
     outline: none;
     border: none;
-  
     cursor: pointer;
     text-align: center;
-    
     letter-spacing: 0.09em;
   }
+
+  .input-add-on_field, .input-add-on_item {
+    border-radius: 0;
+    padding: .3em .7em;
+    margin: 0 auto;
+}
 
   .input-add-on_item:hover {
     background-color: #933085;
@@ -126,7 +194,13 @@ body {
 .input-add-on_field, .input-add-on_item {
     font-size: 1.2em;
 }
+
 @media screen and (min-width: 800px) {
+    section {
+        width: 70%;
+        max-width: 880px;
+    }
+
     #nav-bar {
         display: flex;
         justify-content: space-between;
@@ -153,4 +227,44 @@ body {
       #logo:hover, .nav-link:hover {
         color: rgba(255,255,255,1);
       }
+     
+    .input-add-on {
+        flex-direction: row;
+        width: 3em;
+    }
+
+    .input-add-on_field {
+        border-radius: 5px 0px 0px 5px;
+        width: 240px;
+        height: 50px;
+    }
+
+    .input-add-on_item {
+        border-radius: 0px 5px 5px 0px;
+        width: 280px;
+        height: 50px;
+    }
+
+    #form {
+        font-size: 1.2em;
+        width: 70%;
+        border-radius: 5px;
+        margin: 1.2em auto;
+        padding: 1.3em .2em;
+    }  
+
+    #prices {
+        flex-direction: row;
+    }
+
+    .card {
+        padding: 1.2em .8em;
+        border-radius: 5px;
+        margin: 1em .6em 4em .6em;
+        flex: 1 2 0;	
+    }
+
+    iframe {
+        margin: 6em auto;
+    }
   }
