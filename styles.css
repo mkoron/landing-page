@@ -45,7 +45,8 @@ footer {
 footer p {
     font-size: .8em;
     text-align: right;
-    color: dimgrey;    
+    color: dimgrey;
+    margin: auto;    
 }
 
 #header {
